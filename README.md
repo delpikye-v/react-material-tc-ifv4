@@ -24,6 +24,8 @@ npm install react-material-tc-i4z
 
 Import the module in the place you want to use:
 ```js
+import "react-material-tc-i4z/dist/styles.css";
+
 import TruncateTooltip from "react-material-tc-i4z";
 
 ```
@@ -35,7 +37,13 @@ import TruncateTooltip from "react-material-tc-i4z";
 ```js
 const [size, setSize] = useState(200);
 
-<Button onClick={() => setSize(400)} onDoubleClick={() => setSize(200)}>
+<Button
+  onClick={() => setSize(400)}
+  onClick={() => setSize(200)}
+  // style={{
+  //    width: size, // => you should update it from css class
+  // }}
+  >
   <TruncateShowTooltip title="abdc">
     <span // it should be html element.
       style={{
@@ -62,8 +70,8 @@ const [size, setSize] = useState(200);
 |---------------------|---------------------------|--------------------------------------------------|
 | always              | boolean                   | default: false:  show if text is overflow        |
 | bootstrapCss        | boolean                   | default: true: arrow and color like bootstrapCss |
-| tooltipBgColor      | string                    | default: #000: arrow and color like bootstrapCss |
-| tooltipColor        | string                    | default: #fff: arrow and color like bootstrapCss |
+| tooltipBgColor      | string                    | default: #000:                                   |
+| tooltipColor        | string                    | default: #fff:                                   |
 
 <br />
 
